@@ -1,0 +1,25 @@
+{
+    "name": "example-nodejs",
+    "version": "0.0.1",
+    "description": "Node.js example application for OpenShift",
+    "main": "app.js",
+    "dependencies": {
+
+    },
+    "engine": {
+      "node": "*",
+      "npm": "*"
+    },
+    "scripts": {
+      "start": "node app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/andrewlaidlaw/example-nodejs.git"
+    },
+    "author": "Andrew Laidlaw <andrew.laidlaw@uk.ibm.com>",
+    "bugs": {
+      "url": "https://github.com/andrewlaidlaw/example-nodejs/issues"
+    },
+    "homepage": "https://github.com/andrewlaidlaw/example-nodejs"
+  }
