@@ -8,7 +8,8 @@ const port = 8080;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World from pod '+host);
+  res.end('Hello Systems AI Team from pod '+host);
+  console.log("Someone's knocking at the door");
 });
 
 server.listen(port, hostname, () => {
