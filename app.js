@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
   res.send('Hello OpenShift from pod '+host)
 })
 
+app.get('/hello', (req, res) => {
+  res.send('Secondary target location on '+host)
+})
+
 app.listen(port, hostname, () => {
-  console.log(`Example app listening at http://$(hostname):${port}`)
+  console.log(`Example app listening at http://${hostname}:${port}`)
 })
