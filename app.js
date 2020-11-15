@@ -1,17 +1,19 @@
-const http = require('http');
+const express = require('express');
+const os = require("os");
 
-const os = require('os');
+const app = express();
+const port = 8080;
 const hostname = "0.0.0.0";
 const host = os.hostname();
-const port = 8080;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello OpenShift from pod '+host);
-  console.log("http request at /");
-});
+app.get('/', (req, res) => {
+  res.send('Hello OpenShift from pod '+host)
+})
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.get('/hello', (req, res) => {
+  res.send('Secondary target location on '+host)
+})
+
+app.listen(port, hostname, () => {
+  console.log(`Example app listening at http://${hostname}:${port}`)
+})
