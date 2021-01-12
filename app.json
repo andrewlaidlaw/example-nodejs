@@ -1,0 +1,6 @@
+{
+    "name": "example-nodejs",
+    "description": "Node.js example application for OpenShift.",
+    "repository": "https://github.com/andrewlaidlaw/example-nodejs",
+    "keywords": ["node", "express", "static", "demo"]
+}
