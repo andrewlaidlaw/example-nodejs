@@ -20,6 +20,11 @@ app.get('/secret', (req, res) => {
   console.log(secretinfo)
 })
 
+app.get('/andrew', (req, res) => {
+  res.send('<html><head><title>Andrew</title></head><body><h1>Andrew</h1></body></html>);
+  console.log("Andrew endpoint requested.")
+})
+
 app.get('/healthz', (req, res) => {
   res.send('ok');
 })
