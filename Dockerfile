@@ -8,9 +8,9 @@ RUN cd /usr/local \
 COPY package*.json ./
 RUN npm install
 
-COPY server.js .
+COPY app.js .
 # COPY .env .
 
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]

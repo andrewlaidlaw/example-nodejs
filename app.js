@@ -29,6 +29,10 @@ app.get('/healthz', (req, res) => {
   res.send('ok');
 })
 
+app.get('/techu', (req, res) => {
+  res.send('Hello Technical University');
+})
+
 app.listen(port, hostname, () => {
   console.log(`Example app listening at http://${hostname}:${port}`)
 })
