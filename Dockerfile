@@ -1,4 +1,4 @@
-FROM ppc64le/centos:7
+FROM docker.io/ppc64le/centos:7
         
 #install most up-to-date LTS node for ppc64le
 RUN cd /usr/local \
@@ -8,8 +8,9 @@ RUN cd /usr/local \
 COPY package*.json ./
 RUN npm install
 
-COPY app.js .
+COPY server.js .
+# COPY .env .
 
 EXPOSE 8080
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "server.js" ]
