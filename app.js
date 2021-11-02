@@ -33,6 +33,10 @@ app.get('/techu', (req, res) => {
   res.send('Hello Technical University');
 })
 
+app.get('/azure', (reqq, res) => {
+    res.send('Automated build completed via Azure Pipelines');
+})
+
 app.listen(port, hostname, () => {
   console.log(`Example app listening at http://${hostname}:${port}`)
 })
