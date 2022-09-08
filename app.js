@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('1.0');
+  res.send('2.0');
 })
 
 app.get('/hello', (req, res) => {
