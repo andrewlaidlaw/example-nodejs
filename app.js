@@ -1,10 +1,10 @@
-const express = require('express');
-const os = require("os");
+import express from 'express';
+import { hostname as _hostname } from "os";
 
 const app = express();
 const port = 8080;
 const hostname = "0.0.0.0";
-const host = os.hostname();
+const host = _hostname();
 const secretinfo = process.env.SECRET;
 
 app.get('/', (req, res) => {
@@ -39,6 +39,10 @@ app.get('/techu', (req, res) => {
 
 app.get('/azure', (reqq, res) => {
     res.send('Automated build completed via Azure Pipelines');
+})
+
+app.get('/techzone', (reqq, res) => {
+    res.send('<html><head><title>Andrew</title></head><body><h1>Showing that we can deploy this environment easily on an environment provisioned through IBM TechZone</h1></body></html>');
 })
 
 app.listen(port, hostname, () => {
