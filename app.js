@@ -4,7 +4,7 @@ const os = require("os");
 const app = express();
 const port = 8080;
 const hostname = "0.0.0.0";
-const host = _hostname();
+const host = os.hostname();
 const secretinfo = process.env.SECRET;
 
 app.get('/', (req, res) => {
