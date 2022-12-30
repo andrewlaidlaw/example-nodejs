@@ -1,5 +1,5 @@
-import express from 'express';
-import { hostname as _hostname } from "os";
+const express = require('express');
+const os = require("os");
 
 const app = express();
 const port = 8080;
