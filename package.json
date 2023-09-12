@@ -1,6 +1,6 @@
 {
   "name": "example-nodejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js example application for OpenShift",
   "main": "app.js",
   "dependencies": {
